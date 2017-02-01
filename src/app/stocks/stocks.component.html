@@ -1,0 +1,10 @@
+<h2>Stocks</h2>
+{{title}}
+
+{{stockMarkets.length}}
+
+<ul *ngIf="stockMarkets.length == 5">
+  <li *ngFor="let stockMarket of stockMarkets">
+    {{stockMarket}}
+  </li>
+</ul>
