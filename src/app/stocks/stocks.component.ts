@@ -14,6 +14,8 @@ export class StocksComponent implements OnInit {
   ngOnInit() {
   }
 
+  market = 'LSE';
+
   title = 'List of Stocks: ';
   // stocks = ['AAPL', 'IBM', 'GOOG'];
   stocks;
