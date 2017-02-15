@@ -3,7 +3,16 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-stocks',
   templateUrl: './stocks.component.html',
-  styleUrls: ['./stocks.component.css']
+  styleUrls: ['./stocks.component.css'],
+  styles: [
+    `.customClass{
+      color: brown;
+    }
+    .centerClass{
+      text-align: center;
+    }
+    `
+  ]
 })
 export class StocksComponent implements OnInit {
 
@@ -14,14 +23,16 @@ export class StocksComponent implements OnInit {
   ngOnInit() {
   }
 
+  isCenter = false;
+  isColorBrown = true;
+
+  myColor = 'blue';
+  mySize = '200%';
   market = 'LSE';
 
   title = 'List of Stocks: ';
-  // stocks = ['AAPL', 'IBM', 'GOOG'];
   stocks;
 
   stockMarkets = ['NYSE', 'NASDAQ', 'EURONEXT', 'HKSE', 'LSE'];
-
-
   
 }
