@@ -1,11 +1,11 @@
 <h2>Stocks</h2>
 {{title}}
 
-{{stockMarkets.length}}
+{{stocks.length}}
 
-<ul *ngIf="stockMarkets.length == 5" [ngClass]="{customClass:isColorBrown, centerClass:isCenter}">
-  <li *ngFor="let stockMarket of stockMarkets">
-    {{stockMarket}}
+<ul [ngClass]="{customClass:isColorBrown, centerClass:isCenter}">
+  <li *ngFor="let stock of stocks">
+    {{stock}}
   </li>
 </ul>
 

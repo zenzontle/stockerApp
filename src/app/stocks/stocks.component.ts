@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StockService } from '../stock.service';
 
 @Component({
   selector: 'app-stocks',
@@ -16,8 +17,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StocksComponent implements OnInit {
 
-  constructor() {
-    //this.stocks = stockService.getStocks();
+  constructor(stockService : StockService) {
+    this.stocks = stockService.getStocks();
   }
 
   ngOnInit() {
@@ -32,7 +33,4 @@ export class StocksComponent implements OnInit {
 
   title = 'List of Stocks: ';
   stocks;
-
-  stockMarkets = ['NYSE', 'NASDAQ', 'EURONEXT', 'HKSE', 'LSE'];
-  
 }
