@@ -13,9 +13,24 @@ export class StockService {
     }
 
     getStocksApi(): Observable<any> {
-        return this.http.get('http://localhost:2000/stocks')
+        return this.http.get('http://localhost:4200/stocks')
             .map((res: Response) => res.json())
             .catch((error: any) => Observable.throw(error.json().error || ' Server Error '));
+    }
+
+    createStock(newStockCode: string, newName: string): Observable<any> {
+        return this.http.post('http://localhost:4200/stocks', {name: newName, stockCode: newStockCode});
+    }
+
+    updateStock(stockId: string, newStockCode: string, newName: string): Observable<any> {
+        return this.http.put('http://localhost:4200/stocks/' + stockId, {
+            name: newName,
+            stockCode: newStockCode
+        });
+    }
+
+    deleteStock(stockId: string): Observable<any> {
+        return this.http.delete('http://localhost:4200/stocks/' + stockId);
     }
 
     getStocks(): string[] {
