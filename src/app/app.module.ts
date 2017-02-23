@@ -12,7 +12,8 @@ import { StockService } from './stock.service';
 import { BondsDirective } from './bonds.directive';
 import { StocksComponent } from './stocks/stocks.component';
 import { HighlightDirective } from './highlight.directive';
-import { StockDirectiveDirective } from './stock-directive.directive'
+import { StockDirectiveDirective } from './stock-directive.directive';
+import { StockComponent } from './stock/stock.component'
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { StockDirectiveDirective } from './stock-directive.directive'
     BondsDirective,
     StocksComponent,
     HighlightDirective,
-    StockDirectiveDirective
+    StockDirectiveDirective,
+    StockComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Add New Stock</h1>
+  <div class="row">
+    <form #stockForm="ngForm" (ngSubmit)="onSubmit()">
+      Is it valid? {{stockForm.form.valid}}
+
+      <div class="form-group">
+        <label for="stockName">Stock Name:</label>
+        <input type="text" id="stockName" name="stockName"
+          [(ngModel)]="stockName" class="form-control" required />
+          The entered value: {{stockName}}
+      </div>
+      <button type="submit" [disabled]="!stockForm.form.valid">Submit</button>
+    </form>
+  </div>
+</div>

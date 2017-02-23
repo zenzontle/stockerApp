@@ -17,13 +17,14 @@ import { StockService } from '../stock.service';
 })
 export class StocksComponent implements OnInit {
 
-  constructor(stockService : StockService) {
+  constructor(stockService: StockService) {
     this.stocks = stockService.getStocks();
   }
 
   ngOnInit() {
   }
 
+  // tslint:disable-next-line:member-ordering
   isCenter = false;
   isColorBrown = true;
 
