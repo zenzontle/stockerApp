@@ -13,7 +13,7 @@ import { BondsDirective } from './bonds.directive';
 import { StocksComponent } from './stocks/stocks.component';
 import { HighlightDirective } from './highlight.directive';
 import { StockDirectiveDirective } from './stock-directive.directive';
-import { StockComponent } from './stock/stock.component'
+import { StockComponent } from './stock/stock.component';
 
 @NgModule({
   declarations: [
